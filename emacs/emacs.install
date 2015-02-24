@@ -1,4 +1,4 @@
-INFO_DIR=extra/usr/share/info
+INFO_DIR=usr/share/info
 
 INFO_FILES=(ada-mode auth autotype bovine calc ccmode cl dbus dired-x ebrowse
 ede ediff edt efaq eieio eintr elisp emacs emacs-gnutls emacs-mime epa erc ert eshell eudc flymake
