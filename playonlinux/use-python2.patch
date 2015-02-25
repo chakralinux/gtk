@@ -1,0 +1,24 @@
+diff -Naur playonlinux-orig/playonlinux-pkg playonlinux/playonlinux-pkg
+--- playonlinux-orig/playonlinux-pkg	2013-12-31 11:05:37.000000000 +0100
++++ playonlinux/playonlinux-pkg	2013-12-31 17:03:00.388368229 +0100
+@@ -29,7 +29,7 @@
+ 	CURDIR="$(pwd)"
+ 	export MACHTYPE
+ 	cd "$WorkingDirectory"
+-	python "$CURDIR/python/wrapper.py" "$CURDIR/bash/$(basename "$0")" "$@"
++	python2 "$CURDIR/python/wrapper.py" "$CURDIR/bash/$(basename "$0")" "$@"
+ else
+ 	bash "$PLAYONLINUX/bash/$(basename "$0")" "$@"
+ fi
+diff -Naur playonlinux-orig/playonlinux-url_handler playonlinux/playonlinux-url_handler
+--- playonlinux-orig/playonlinux-url_handler	2013-12-31 11:05:37.000000000 +0100
++++ playonlinux/playonlinux-url_handler	2013-12-31 17:03:15.719362367 +0100
+@@ -29,7 +29,7 @@
+ 	CURDIR="$(pwd)"
+ 	export MACHTYPE
+ 	cd "$WorkingDirectory"
+-	python "$CURDIR/python/wrapper.py" "$CURDIR/bash/$(basename "$0")" "$@"
++	python2 "$CURDIR/python/wrapper.py" "$CURDIR/bash/$(basename "$0")" "$@"
+ else
+ 	bash "$PLAYONLINUX/bash/$(basename "$0")" "$@"
+ fi
