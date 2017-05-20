@@ -1,8 +1,8 @@
 # Maintainer: Jeff Hunag <s8321414[at]gmail[dot]com>
 
 pkgname=inkscape
-pkgver=0.91
-pkgrel=2
+pkgver=0.92.1
+pkgrel=1
 pkgdesc='Vector graphics editor using the SVG file format'
 url='http://inkscape.sourceforge.net/'
 license=('GPL' 'LGPL')
@@ -18,11 +18,13 @@ optdepends=('pstoedit: latex formulas'
             'uniconvertor: reading/writing to some proprietary formats')
 #source=("http://downloads.sourceforge.net/project/${pkgname}/${pkgname}/${pkgver}/${pkgname}-${pkgver}.tar.bz2")
 source=("https://inkscape.global.ssl.fastly.net/media/resources/file/$pkgname-$pkgver.tar.bz2")
-sha1sums=('9941ee467af570ac71a70f965cd9c48d4993b8f3')
+sha1sums=('bede1252b344dc08abb6736084364d8125a6dffc')
 install=install
 
 prepare() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
+	./autogen.sh
+
 	sed -i 's|/usr/bin/python\>|/usr/bin/python2|g' cxxtest/*.py
 	sed -i 's|/usr/bin/env python\>|/usr/bin/env python2|g' share/*/{test/,}*.py
 	sed -i 's|"python" },|"python2" },|g' src/extension/implementation/script.cpp
